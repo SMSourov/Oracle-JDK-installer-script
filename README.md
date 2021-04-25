@@ -10,14 +10,18 @@ To uninstall the Oracle JDK, open the terminal and run:
 sudo ./uninstall.sh
 
 However, if you get some error like this:
+
 sudo: ./install.sh: command not found
 
 or like this:
+
 sudo: ./uninstall.sh: command not found
 
 then probably the files are not permitted to execute.
 To make them executable, run these commands:
+
 chmod 755 install.sh
+
 chmod 755 uninstall.sh
 
 This will give the permission to the script files to execute.
@@ -29,4 +33,4 @@ Copy and paste the text of the script files.
 Find "16.0.1" and replace all of them with the latest (or the one which is in your PC) Oracle JDK version and save it.
 
 This script files are applicable for the .deb file.
-I've tested this on my main machine which is running on KDE Neon.
+I've tested this on my main machine which is running on KDE Neon and I had no problems.
