@@ -1,4 +1,5 @@
 Read till the end. It won't take long.
+
 Script files for installing and uninstalling Oracle JDK.
 
 The script files and the .deb must be in the same directory.
