@@ -31,7 +31,7 @@ Now, try again to install and uninstall (if immediate uninstallation is necessar
 The script files were made for Oracle JDK version 16.0.2 which is the latest version at the time of writing this.
 However, you may need to change the version which is an easy task.
 Copy and paste the text of the script files.
-Find "16.0.2" and replace all of them with the latest (or the one which is in your PC) Oracle JDK version and save it.
+Find "17" and replace all of them with the latest (or the one which is in your PC) Oracle JDK version and save it.
 
 This script files are applicable for the .deb file.
-I've tested this on my main machine which is running on Ubuntu 20.04 and I had no problems.
+I've tested this on my main machine which is running on Ubuntu 22.04 and I had no problems.
