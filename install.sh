@@ -7,13 +7,14 @@ sudo apt install ./jdk-17_linux-x64_bin.deb
 
 
 
-
 # Run_JAR.sh will change the directory 
 # to working directory and run the JAR 
 # file from there. By default, user 
 # home directory is set as current 
 # working directory no matter where 
 # the JAR file is located. 
+
+echo "Creating the JAR executing script."
 
 # Run_JAR.sh is executable. 
 cat > Run_JAR.sh << EOF
@@ -28,7 +29,8 @@ EOF
 sudo chmod 755 Run_JAR.sh
 
 
-
+# Extract the picture from the script file.
+sudo ./Java_icon_128x128.png.sh
 
 
 
@@ -115,10 +117,11 @@ cat > Oracle_JAR_17.desktop << EOF
 Version=17.0
 Name[en_US]=Run JAR
 Type=Application
-Icon=org.gnome.tweaks
+Icon=$PWD/Java_icon_128x128.png
 GenericName[en_US]=Run Java archive program
 Comment[en_US]=A file association for .jar file for java.
 Exec=/bin/bash $PWD/Run_JAR.sh %U
+MimeType=application/x-java-archive
 Terminal=false
 NoDisplay=true
 Type=Application
@@ -143,6 +146,18 @@ EOF
 
 source /etc/profile.d/jdk-17.sh
 
+
+# Update the MIME database.
+
+echo "Updating the MIME database."
+
+sudo update-mime-database /usr/share/mime/
+
+# Update the desktop database
+
+echo "Updating the desktop database"
+
+sudo update-desktop-database /usr/share/applications
 
 
 echo "Oracle JDK installation finished."
