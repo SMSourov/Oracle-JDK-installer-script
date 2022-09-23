@@ -45,7 +45,19 @@ sudo update-alternatives --remove serialver /usr/lib/jvm/jdk-17/bin/serialver
 # Remove the shortcuts.
 sudo rm Run_JAR.sh
 sudo rm /usr/share/applications/Oracle_JAR_17.desktop
+sudo rm Java_icon_128x128.png
 
+# Update the MIME database.
+
+echo "Updating the MIME database."
+
+sudo update-mime-database /usr/share/mime/
+
+# Update the desktop database
+
+echo "Updating the desktop database"
+
+sudo update-desktop-database /usr/share/applications
 
 echo "Oracle JDK removed."
 
